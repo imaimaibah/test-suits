@@ -1,0 +1,6 @@
+spawn ssh -l centos 10.10.4.67
+Last login: Fri Dec 23 16:10:33 2016 from 10.10.1.95
+]0;centos@dev-ipa1:~[?1034h[centos@dev-ipa1 ~]$ sudo -i
+]0;root@dev-ipa1:~[?1034h[root@dev-ipa1 ~]# netstat -plant |/bin/grep LISTEN | awk '{print $4}'  | awk -F: '$NF==80'
+:::80
+]0;root@dev-ipa1:~[root@dev-ipa1 ~]# 

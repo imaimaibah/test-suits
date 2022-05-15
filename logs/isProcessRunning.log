@@ -1,0 +1,12 @@
+spawn ssh -l centos 10.10.4.67
+Last login: Fri Dec 23 14:57:25 2016 from 10.10.1.95
+]0;centos@dev-ipa1:~[?1034h[centos@dev-ipa1 ~]$ sudo -i
+]0;root@dev-ipa1:~[?1034h[root@dev-ipa1 ~]# ps auxf |grep -v grep |/bin/grep sss
+root       505  0.0  0.0 255696  3248 ?        Ss   08:01   0:01 /usr/sbin/sssd -D -f
+root       506  0.0  0.2 365592  8652 ?        S    08:01   0:01  \_ /usr/libexec/sssd/sssd_be --domain rd.sainsburys-poc.uk --uid 0 --gid 0 --debug-to-files
+root       522  0.0  0.7 261544 28580 ?        S    08:01   0:00  \_ /usr/libexec/sssd/sssd_nss --uid 0 --gid 0 --debug-to-files
+root       523  0.0  0.1 234732  3812 ?        S    08:01   0:00  \_ /usr/libexec/sssd/sssd_sudo --uid 0 --gid 0 --debug-to-files
+root       524  0.0  0.1 239068  3788 ?        S    08:01   0:00  \_ /usr/libexec/sssd/sssd_pam --uid 0 --gid 0 --debug-to-files
+root       525  0.0  0.1 234608  3656 ?        S    08:01   0:00  \_ /usr/libexec/sssd/sssd_ssh --uid 0 --gid 0 --debug-to-files
+root       526  0.0  0.1 259968  4692 ?        S    08:01   0:00  \_ /usr/libexec/sssd/sssd_pac --uid 0 --gid 0 --debug-to-files
+]0;root@dev-ipa1:~[root@dev-ipa1 ~]# 

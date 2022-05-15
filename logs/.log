@@ -1,0 +1,36 @@
+spawn ssh -l centos 10.10.4.67
+Last login: Fri Dec 23 14:09:55 2016 from 10.10.1.95
+kcentos@dev-ipa1:~\[centos@dev-ipa1 ~]$ sudo -i
+kroot@dev-ipa1:~\[root@dev-ipa1 ~]# netstat -plant |grep LISTEN | /bin/grep -v grep
+tcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN      2591/smbd           
+tcp        0      0 0.0.0.0:749             0.0.0.0:*               LISTEN      2253/kadmind        
+tcp        0      0 0.0.0.0:464             0.0.0.0:*               LISTEN      2253/kadmind        
+tcp        0      0 10.10.4.67:53           0.0.0.0:*               LISTEN      2262/named-pkcs11   
+tcp        0      0 127.0.0.1:53            0.0.0.0:*               LISTEN      2262/named-pkcs11   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      799/sshd            
+tcp        0      0 0.0.0.0:88              0.0.0.0:*               LISTEN      2248/krb5kdc        
+tcp        0      0 127.0.0.1:953           0.0.0.0:*               LISTEN      2262/named-pkcs11   
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1153/master         
+tcp        0      0 0.0.0.0:445             0.0.0.0:*               LISTEN      2591/smbd           
+tcp        0      0 0.0.0.0:1024            0.0.0.0:*               LISTEN      2597/smbd           
+tcp        0      0 0.0.0.0:135             0.0.0.0:*               LISTEN      2596/smbd           
+tcp6       0      0 127.0.0.1:8009          :::*                    LISTEN      2483/java           
+tcp6       0      0 :::139                  :::*                    LISTEN      2591/smbd           
+tcp6       0      0 :::749                  :::*                    LISTEN      2253/kadmind        
+tcp6       0      0 :::8080                 :::*                    LISTEN      2483/java           
+tcp6       0      0 :::80                   :::*                    LISTEN      2282/httpd          
+tcp6       0      0 :::464                  :::*                    LISTEN      2253/kadmind        
+tcp6       0      0 :::53                   :::*                    LISTEN      2262/named-pkcs11   
+tcp6       0      0 :::22                   :::*                    LISTEN      799/sshd            
+tcp6       0      0 :::88                   :::*                    LISTEN      2248/krb5kdc        
+tcp6       0      0 ::1:953                 :::*                    LISTEN      2262/named-pkcs11   
+tcp6       0      0 ::1:25                  :::*                    LISTEN      1153/master         
+tcp6       0      0 :::8443                 :::*                    LISTEN      2483/java           
+tcp6       0      0 :::443                  :::*                    LISTEN      2282/httpd          
+tcp6       0      0 :::636                  :::*                    LISTEN      1674/ns-slapd       
+tcp6       0      0 :::445                  :::*                    LISTEN      2591/smbd           
+tcp6       0      0 :::1024                 :::*                    LISTEN      2597/smbd           
+tcp6       0      0 127.0.0.1:8005          :::*                    LISTEN      2483/java           
+tcp6       0      0 :::389                  :::*                    LISTEN      1674/ns-slapd       
+tcp6       0      0 :::135                  :::*                    LISTEN      2596/smbd           
+kroot@dev-ipa1:~\[root@dev-ipa1 ~]# 

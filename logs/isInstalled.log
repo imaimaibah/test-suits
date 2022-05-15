@@ -1,0 +1,7 @@
+spawn ssh -l centos 10.10.4.67
+Last login: Fri Dec 23 16:10:34 2016 from 10.10.1.95
+]0;centos@dev-ipa1:~[?1034h[centos@dev-ipa1 ~]$ sudo -i
+]0;root@dev-ipa1:~[?1034h[root@dev-ipa1 ~]# rpm -qa |/bin/grep httpd
+httpd-2.4.6-40.el7.centos.4.x86_64
+httpd-tools-2.4.6-40.el7.centos.4.x86_64
+]0;root@dev-ipa1:~[root@dev-ipa1 ~]# 

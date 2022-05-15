@@ -1,0 +1,17 @@
+log_user 0
+log_file -noappend -a ./logs/isPortListen.log
+
+spawn ssh -l centos 10.10.4.67
+expect "$ "
+send "sudo -i\n"
+expect "# "
+send "netstat -plant |/bin/grep LISTEN | awk '{print \$4}'  | awk -F: '\$NF==80'\n"
+expect -re ".*?\n"
+while {1} {
+	expect -re ".*\n" {
+		puts -nonewline "$expect_out(buffer)"
+	} -re "# " {
+		break
+	}
+}
+
